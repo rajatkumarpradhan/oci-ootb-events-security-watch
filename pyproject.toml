@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oci-ootb-events-security-watch"
+version = "0.1.0"
+description = "OCI Events security-notification templates plus an offline coverage checker"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+oci-ootb-events-security-watch = "oci_ootb_events_security_watch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
