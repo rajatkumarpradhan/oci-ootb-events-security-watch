@@ -1,0 +1,37 @@
+{
+  "rules": [
+    {
+      "name": "iam-policy-watch",
+      "enabled": true,
+      "event_types": [
+        "com.oraclecloud.identitycontrolplane.createpolicy",
+        "com.oraclecloud.identitycontrolplane.updatepolicy"
+      ],
+      "actions": {"topic": "ocid1.onstopic.example.security"}
+    },
+    {
+      "name": "network-watch",
+      "enabled": false,
+      "event_types": [
+        "com.oraclecloud.virtualnetwork.updatesecuritylist"
+      ],
+      "actions": {"topic": "ocid1.onstopic.example.security"}
+    },
+    {
+      "name": "bucket-watch",
+      "enabled": true,
+      "event_types": [
+        "com.oraclecloud.objectstorage.updatebucket"
+      ],
+      "actions": {}
+    },
+    {
+      "name": "iam-policy-watch-copy",
+      "enabled": true,
+      "event_types": [
+        "com.oraclecloud.identitycontrolplane.createpolicy"
+      ],
+      "actions": {"topic": "ocid1.onstopic.example.security"}
+    }
+  ]
+}
